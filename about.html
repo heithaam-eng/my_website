@@ -20,31 +20,46 @@
 </header>
 
 <main>
-<section class="intro fade">
-  <h2 data-ar="سيرتي الذاتية" data-en="My Resume">سيرتي الذاتية</h2>
-  <p data-ar="أنا هيثم، مختص في الأمن السيبراني والبرمجة..." data-en="I am Haitham, a Cyber Security specialist and programmer...">
-    أنا هيثم، مختص في الأمن السيبراني والبرمجة...
-  </p>
-</section>
+  <section class="fade">
+    <h2 data-ar="نبذة عني" data-en="About Me">نبذة عني</h2>
+    <p data-ar="أنا هيثم، مختص في الأمن السيبراني والبرمجة..." 
+       data-en="I am Haitham, a Cyber Security specialist and programmer...">
+      أنا هيثم، مختص في الأمن السيبراني والبرمجة، أعمل في الدفاع والهجوم السيبراني، وأسعى دائمًا لتطوير مهاراتي.
+    </p>
+  </section>
 
-<section class="skills fade">
-  <h2 data-ar="مهاراتي" data-en="My Skills">مهاراتي</h2>
-  <ul>
-    <li>CSS, JavaScript, HTML</li>
-    <li>Cyber Security: Defensive & Offensive</li>
-    <li>Problem Solving & Logical Thinking</li>
-  </ul>
-</section>
+  <section class="skills fade">
+    <h2 data-ar="خبراتي" data-en="My Skills">خبراتي</h2>
+    <div class="cards">
+      <div class="card">
+        <h3 data-ar="مهارات الدفاع" data-en="Defensive Skills">مهارات الدفاع</h3>
+        <ul>
+          <li data-ar="أمن الشبكات" data-en="Network Security">أمن الشبكات</li>
+          <li data-ar="تأمين الأنظمة" data-en="System Hardening">تأمين الأنظمة</li>
+          <li data-ar="الاستجابة للحوادث" data-en="Incident Response">الاستجابة للحوادث</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 data-ar="مهارات الهجوم" data-en="Offensive Skills">مهارات الهجوم</h3>
+        <ul>
+          <li data-ar="اختبار الاختراق" data-en="Penetration Testing">اختبار الاختراق</li>
+          <li data-ar="أمن المواقع" data-en="Web Security">أمن المواقع</li>
+          <li data-ar="تقييم الثغرات" data-en="Vulnerability Assessment">تقييم الثغرات</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="fade">
-  <p data-ar="© 2025 هيثم – جميع الحقوق محفوظة" data-en="© 2025 Haitham – All Rights Reserved">
-    © 2025 هيثم – جميع الحقوق محفوظة
-  </p>
-  <div class="lang-switch-footer">
+  <div class="lang-switch">
     <button onclick="setLang('ar')">AR</button>
     <button onclick="setLang('en')">EN</button>
   </div>
+  <p data-ar="© 2025 هيثم – جميع الحقوق محفوظة"
+     data-en="© 2025 Haitham – All Rights Reserved">
+    © 2025 هيثم – جميع الحقوق محفوظة
+  </p>
 </footer>
 
 <script src="js/script.js"></script>
