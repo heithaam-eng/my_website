@@ -1,0 +1,63 @@
+/* Dynamic Colors */
+:root {
+  --primary-color: #00ffff;
+  --secondary-color: #0ff;
+}
+
+@keyframes colorShift {
+  0%   { --primary-color: #00ffff; --secondary-color: #0ff; }
+  25%  { --primary-color: #ff00ff; --secondary-color: #f0f; }
+  50%  { --primary-color: #00ff00; --secondary-color: #0f0; }
+  75%  { --primary-color: #ffff00; --secondary-color: #ff0; }
+  100% { --primary-color: #00ffff; --secondary-color: #0ff; }
+}
+
+body {
+  animation: colorShift 15s infinite alternate;
+  margin:0; padding:0; font-family:Arial, sans-serif;
+  background:#000; color:#fff;
+}
+
+/* Fade Animation */
+.fade {opacity:0; transform:translateY(20px); transition:1s ease;}
+.fade.show {opacity:1; transform:translateY(0);}
+
+/* Buttons Hover */
+button {transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;}
+button:hover {transform: scale(1.1); background: var(--secondary-color); color: #000; cursor:pointer;}
+
+/* Cards Hover */
+.card {transition: transform 0.3s ease, box-shadow 0.3s ease;}
+.card:hover {transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.3);}
+
+/* Navigation Links Hover */
+nav a {transition: color 0.3s ease;}
+nav a:hover {color: var(--secondary-color);}
+
+/* Contact List */
+.contact-list {list-style:none; padding:0; margin:20px 0; text-align:center;}
+.contact-list li {
+  margin:10px 0;
+  font-size:1.1em;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+}
+.contact-list i {
+  color: var(--primary-color);
+  font-size:1.3em;
+  transition:0.3s;
+}
+.contact-list a {
+  color: var(--primary-color);
+  text-decoration:none;
+  transition:0.3s;
+}
+.contact-list a:hover, .contact-list i:hover {
+  color: var(--secondary-color);
+  transform:scale(1.2);
+}
+
+/* Canvas Fullscreen */
+canvas {position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1;}
