@@ -1,29 +1,52 @@
-const faders = document.querySelectorAll('.fade-in');
-const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
-const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-entries.forEach(entry => {
-if (!entry.isIntersecting) return;
-entry.target.classList.add('appear');
-observer.unobserve(entry.target);
-});
-}, appearOptions);
-faders.forEach(fader => { appearOnScroll.observe(fader); });
+/* Matrix Background */
+const canvas = document.getElementById("matrix");
+const ctx = canvas.getContext("2d");
 
-// particles.js
-particlesJS("particles-js", {
-"particles": {
-"number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
-"color": { "value": "#0d47a1" },
-"shape": { "type": "circle" },
-"opacity": { "value": 0.5, "random": true },
-"size": { "value": 3, "random": true },
-"line_linked": { "enable": true, "distance": 150, "color": "#0d47a1", "opacity": 0.4, "width": 1 },
-"move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false }
-},
-"interactivity": {
-"detect_on": "canvas",
-"events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" } },
-"modes": { "repulse": { "distance": 100, "duration": 0.4 }, "push": { "particles_nb": 4 } }
-},
-"retina_detect": true
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const letters = "01HACKSECURITY";
+const fontSize = 14;
+const columns = canvas.width / fontSize;
+const drops = [];
+
+for (let i = 0; i < columns; i++) drops[i] = 1;
+
+function drawMatrix() {
+  ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  ctx.fillStyle = "#00ffff";
+  ctx.font = fontSize + "px monospace";
+
+  for (let i = 0; i < drops.length; i++) {
+    const text = letters.charAt(Math.floor(Math.random() * letters.length));
+    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+    if (drops[i] * fontSize > canvas.height && Math.random() > 0.95) {
+      drops[i] = 0;
+    }
+    drops[i]++;
+  }
+}
+
+setInterval(drawMatrix, 50);
+
+/* Scroll Animation */
+const fades = document.querySelectorAll(".fade");
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
 });
+fades.forEach(el => observer.observe(el));
+
+/* Language Switch */
+function setLang(lang) {
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-ar]").forEach(el => {
+    el.textContent = el.getAttribute(`data-${lang}`);
+  });
+}

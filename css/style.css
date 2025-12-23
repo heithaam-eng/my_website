@@ -5,39 +5,44 @@
 
 body {
   margin: 0;
-  background: #0b0f14;
+  background: #05080d;
   color: #eaeaea;
+  overflow-x: hidden;
+}
+
+/* Matrix Canvas */
+#matrix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 /* Header */
 header {
   text-align: center;
   padding: 40px 20px;
-  background: linear-gradient(135deg, #020024, #090979, #00d4ff);
 }
 
 header h1 {
-  margin: 0;
   font-size: 40px;
 }
 
 header p {
-  margin: 10px 0;
-  color: #b5eaff;
+  color: #00ffff;
 }
 
 nav a {
-  color: #ffffff;
+  color: white;
   margin: 0 10px;
   text-decoration: none;
-  font-weight: bold;
 }
 
 /* Main */
 main {
-  padding: 40px 20px;
   max-width: 1000px;
   margin: auto;
+  padding: 40px 20px;
 }
 
 .intro {
@@ -51,10 +56,9 @@ main {
 
 /* Cyber Section */
 .cyber {
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background: rgba(0,0,0,0.6);
   padding: 40px;
   border-radius: 15px;
-  box-shadow: 0 0 30px rgba(0,255,255,0.15);
 }
 
 .cyber h2 {
@@ -64,8 +68,7 @@ main {
 
 .cyber-desc {
   text-align: center;
-  margin: 20px 0 40px;
-  line-height: 1.8;
+  margin-bottom: 40px;
 }
 
 .cyber-skills {
@@ -76,31 +79,51 @@ main {
 }
 
 .card {
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.7);
   padding: 25px;
   width: 260px;
   border-radius: 12px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: 0.3s;
 }
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 0 20px rgba(0,255,255,0.4);
+  box-shadow: 0 0 20px cyan;
 }
 
 .card h3 {
-  color: #00e6e6;
-}
-
-.card ul {
-  padding-left: 20px;
+  color: #00ffff;
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  margin-top: 60px;
-  background: #05080d;
   color: #888;
+}
+
+/* Scroll Animation */
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.lang-switch {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.lang-switch button {
+  background: transparent;
+  border: 1px solid cyan;
+  color: cyan;
+  margin-left: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
 }
