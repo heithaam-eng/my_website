@@ -1,48 +1,47 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>اتصل بي</title>
-<link rel="stylesheet" href="css/style.css">
-<script src="js/lib/particles.min.js"></script>
-<script defer src="js/script.js"></script>
+  <meta charset="UTF-8">
+  <title>Contact | Haitham</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div id="particles-js"></div>
 
-<header>
-<div class="logo">موقعي الشخصي</div>
-<nav>
-<a href="index.html">الرئيسية</a>
-<a href="about.html">عنّي</a>
-<a href="contact.html">اتصل بي</a>
-</nav>
+<canvas id="matrix"></canvas>
+
+<header class="fade">
+  <h1 data-ar="اتصل بي" data-en="Contact Me">اتصل بي</h1>
+  <nav>
+    <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+    <a href="about.html" data-ar="عنّي" data-en="About">عنّي</a>
+    <a href="contact.html" data-ar="اتصل بي" data-en="Contact">اتصل بي</a>
+  </nav>
 </header>
 
 <main>
-<section class="fade-in">
-<h2>معلومات التواصل المباشر</h2>
-<p>البريد الإلكتروني: <a href="mailto:heithaam@gmail.com">heithaam@gmail.com</a></p>
-<p>واتساب: <a href="https://wa.me/213791452783">+213 791452783</a></p>
-</section>
-
-<section class="fade-in">
-<h2>أرسل رسالة</h2>
-<form>
-<label>الاسم:</label><br>
-<input type="text" name="name" placeholder="اسمك"><br>
-<label>البريد الإلكتروني:</label><br>
-<input type="email" name="email" placeholder="example@email.com"><br>
-<label>رسالتك:</label><br>
-<textarea name="message" placeholder="اكتب رسالتك هنا"></textarea><br>
-<button type="submit">إرسال</button>
-</form>
+<section class="contact fade">
+  <h2 data-ar="معلومات التواصل" data-en="Contact Information">معلومات التواصل</h2>
+  <p data-ar="يمكنك التواصل معي عبر البريد الإلكتروني أو الواتساب." data-en="You can contact me via email or WhatsApp.">
+    يمكنك التواصل معي عبر البريد الإلكتروني أو الواتساب.
+  </p>
+  <ul>
+    <li data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني: <a href="mailto:heithaam@gmail.com">heithaam@gmail.com</a></li>
+    <li data-ar="واتساب" data-en="WhatsApp">واتساب: <a href="https://wa.me/213791452783" target="_blank">+213 791452783</a></li>
+  </ul>
 </section>
 </main>
 
-<footer>
-<p>&copy; 2025 جميع الحقوق محفوظة</p>
+<footer class="fade">
+  <p data-ar="© 2025 هيثم – جميع الحقوق محفوظة" data-en="© 2025 Haitham – All Rights Reserved">
+    © 2025 هيثم – جميع الحقوق محفوظة
+  </p>
+  <div class="lang-switch-footer">
+    <button onclick="setLang('ar')">AR</button>
+    <button onclick="setLang('en')">EN</button>
+  </div>
 </footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>

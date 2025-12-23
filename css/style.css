@@ -113,17 +113,51 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
-.lang-switch {
-  position: absolute;
-  top: 15px;
-  right: 20px;
+
+/* Language Footer Button */
+.lang-switch-footer {
+  text-align: center;
+  margin-top: 15px;
 }
 
-.lang-switch button {
+.lang-switch-footer button {
   background: transparent;
   border: 1px solid cyan;
   color: cyan;
-  margin-left: 5px;
-  padding: 5px 10px;
+  margin: 0 5px;
+  padding: 5px 12px;
   cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.lang-switch-footer button:hover {
+  background: cyan;
+  color: black;
+}
+
+/* Responsive & RTL/LTR */
+body[lang="ar"] {
+  direction: rtl;
+}
+
+body[lang="en"] {
+  direction: ltr;
+}
+
+@media screen and (max-width: 768px) {
+  .cyber-skills {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card {
+    width: 90%;
+  }
 }

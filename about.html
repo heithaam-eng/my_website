@@ -1,65 +1,52 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>عنّي</title>
-<link rel="stylesheet" href="css/style.css">
-<script src="js/lib/particles.min.js"></script>
-<script defer src="js/script.js"></script>
+  <meta charset="UTF-8">
+  <title>About | Haitham</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div id="particles-js"></div>
 
-<header>
-<div class="logo">موقعي الشخصي</div>
-<nav>
-<a href="index.html">الرئيسية</a>
-<a href="about.html">عنّي</a>
-<a href="contact.html">اتصل بي</a>
-</nav>
+<canvas id="matrix"></canvas>
+
+<header class="fade">
+  <h1 data-ar="عنّي" data-en="About Me">عنّي</h1>
+  <nav>
+    <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+    <a href="about.html" data-ar="عنّي" data-en="About">عنّي</a>
+    <a href="contact.html" data-ar="اتصل بي" data-en="Contact">اتصل بي</a>
+  </nav>
 </header>
 
 <main>
-<section class="fade-in">
-<h2>من أنا؟</h2>
-<p>أنا هيثم، مختص في البرمجة والأمن السيبراني، أحب تطوير البرمجيات وحل المشكلات التقنية المعقدة. أعمل على تحسين مهاراتي يوميًا في HTML، CSS، JavaScript، والأمن السيبراني، وأسعى لأن أكون من بين أفضل 100 مطور في العالم.</p>
+<section class="intro fade">
+  <h2 data-ar="سيرتي الذاتية" data-en="My Resume">سيرتي الذاتية</h2>
+  <p data-ar="أنا هيثم، مختص في الأمن السيبراني والبرمجة..." data-en="I am Haitham, a Cyber Security specialist and programmer...">
+    أنا هيثم، مختص في الأمن السيبراني والبرمجة...
+  </p>
 </section>
 
-<section class="fade-in">
-<h2>خبراتي</h2>
-<ul>
-<li>خبير في الأمن السيبراني (دفاع وهجوم)</li>
-<li>تصميم مواقع ويب</li>
-<li>تطوير واجهات مستخدم</li>
-<li>تعلم التقنيات الحديثة: HTML، CSS، JavaScript</li>
-</ul>
-</section>
-
-<section class="cards fade-in">
-<div class="card">
-<h3>هواياتي</h3>
-<p>القراءة، البرمجة، ممارسة الرياضة</p>
-</div>
-<div class="card">
-<h3>مهاراتي</h3>
-<p>خبير في الأمن السيبراني (دفاع وهجوم)<br>HTML، CSS، JavaScript</p>
-</div>
-<div class="card">
-<h3>أهدافي</h3>
-<p>أن أصبح من بين أفضل 100 مطور في العالم</p>
-</div>
-</section>
-
-<section class="fade-in">
-<h2>معلومات التواصل</h2>
-<p>البريد الإلكتروني: <a href="mailto:heithaam@gmail.com">heithaam@gmail.com</a></p>
-<p>واتساب: <a href="https://wa.me/213791452783">+213 791452783</a></p>
+<section class="skills fade">
+  <h2 data-ar="مهاراتي" data-en="My Skills">مهاراتي</h2>
+  <ul>
+    <li>CSS, JavaScript, HTML</li>
+    <li>Cyber Security: Defensive & Offensive</li>
+    <li>Problem Solving & Logical Thinking</li>
+  </ul>
 </section>
 </main>
 
-<footer>
-<p>&copy; 2025 جميع الحقوق محفوظة</p>
+<footer class="fade">
+  <p data-ar="© 2025 هيثم – جميع الحقوق محفوظة" data-en="© 2025 Haitham – All Rights Reserved">
+    © 2025 هيثم – جميع الحقوق محفوظة
+  </p>
+  <div class="lang-switch-footer">
+    <button onclick="setLang('ar')">AR</button>
+    <button onclick="setLang('en')">EN</button>
+  </div>
 </footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>
